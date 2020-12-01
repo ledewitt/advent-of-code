@@ -12,5 +12,13 @@ combos.each { |x,y|
   end
 }
 
+combos_of_3 = numbers.combination(3).to_a
+
+combos_of_3.each { |x,y,z|
+  if x+y+z == 2020
+    p x*y*z
+  end
+}
+
 # p combos
 
