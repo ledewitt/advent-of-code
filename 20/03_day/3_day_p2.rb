@@ -12,22 +12,15 @@ def counting_trees(rows, step_right, step_down)
       next
     end
 
-    # p i
     if i[position[1]] == "#"
       numb_trees += 1
     end
-
-      # p "#{position} Where I look if there is a tree."
-      # p i[position[1]]
-
 
     position[1] += step_right
 
     if position[1] > row_length - 1
       position[1] -= row_length
     end
-
-     # p position
   }
 
   return numb_trees
@@ -44,18 +37,3 @@ d = counting_trees(rows, 7, 1)
 e = counting_trees(rows, 1, 2)
 
 p a*b*c*d*e
-
-#p position
-
-#p rows[0][30]
-
-#p rows[0]
-
-#p rows[0][3]
-#p rows[0][4]
-#p rows[0][5]
-
-#p rows[0].size
-
-#p rows[0][30]
-#p rows[0][31]

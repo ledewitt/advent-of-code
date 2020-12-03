@@ -13,7 +13,6 @@ row_length = rows[0].size
 
 rows.each { |i|
 
-  # p i
   if i[position[1]] == "#"
     numb_trees += 1
   end
@@ -32,18 +31,3 @@ rows.each { |i|
 }
 
 p numb_trees
-
-#p position
-
-#p rows[0][30]
-
-#p rows[0]
-
-#p rows[0][3]
-#p rows[0][4]
-#p rows[0][5]
-
-#p rows[0].size
-
-#p rows[0][30]
-#p rows[0][31]
