@@ -3,6 +3,7 @@ boarding_passes = File.open("data.dat").read.split
 #p boarding_passes
 
 highest_seat_id = 0
+seats = []
 
 boarding_passes.each { |pass|
   row = pass[0..6]
@@ -28,6 +29,8 @@ boarding_passes.each { |pass|
   i_column = b_column.join.to_i(2)
 
   seat_id = i_row * 8 + i_column
+  
+  seats << seat_id
 
   if seat_id > highest_seat_id
     highest_seat_id = seat_id
@@ -41,4 +44,15 @@ boarding_passes.each { |pass|
 
 }
 
-p highest_seat_id
+#p highest_seat_id
+sorted_seats = seats.sort
+offset = sorted_seats[0]
+
+sorted_seats.each.with_index { |s, i|
+  if s - i == offset
+    next
+  else
+    p s-1
+    break 
+  end
+}
