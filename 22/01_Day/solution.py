@@ -22,7 +22,7 @@ with open('input.txt') as f:
 	print(f'Elf {max_elf} is carrying most cals {max_cals}')
 	
 	arr_cal.sort()
-	print(arr_cal)
+	# print(arr_cal)
 
 	last_three = 0
 
